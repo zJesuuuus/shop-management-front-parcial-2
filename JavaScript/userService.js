@@ -20,10 +20,9 @@ function getUsers(page){
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">First Name</th>
-                            <th scope="col">Last Name</th>
-                            <th scope="col">Avatar</th>
-                            <th scope="col">Action</th>
+                            <th scope="col">User Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
                         </tr>
                     </thead>
                 <tbody>
@@ -34,6 +33,7 @@ function getUsers(page){
                         <td>${user.id}</td>
                         <td>${user.username}</td>
                         <td>${user.email}</td>
+                        <td>${user.phone}</td>
                         <td>
                             <button type="button" class="btn btn-outline-danger" onclick="showInfoUser('${user.id}')">View</button>
                         </td>
@@ -50,5 +50,5 @@ function getUsers(page){
         else{
             document.getElementById('info').innerHTML = '<h3>No se encontraron Usuarios</h3>'
         }
-    })
+    })   
 }
